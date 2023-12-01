@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/head.htm',{"title":"Cтраница не найдена"})
+    <body class="page">
+        <div class="scaffold">
+            @@include('html/components/header.htm',{"class":"","data":""})
+            <main class="content">
+                <section class="error">
+                    <div class="error__container">
+                        <h1 class="error__title">404</h1>
+                        <div class="error__text">Такой страницы нет, то что вы ищите находится <a href="index.html" class="error__link">здесь</a>.</div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/components/footer.htm',{})
+        </div>
+        @@include('html/components/js.htm',{})
+    </body>
+</html>

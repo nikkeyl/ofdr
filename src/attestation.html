@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/head.htm',{"title":"Аттестация"})
+    <body class="page">
+        <div class="scaffold">
+            @@include('html/components/header.htm',{"class":"","data":""})
+            <main class="content">
+                <nav class="breadcrumbs content__breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__slash">-</li>
+                        <li class="breadcrumbs__item">
+                            <a href="page.html" class="breadcrumbs__link">Аттестация</a>
+                        </li>
+                        <li class="breadcrumbs__slash">-</li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__current">Аттестация по электробезопасности</span>
+                        </li>
+                    </ul>
+                </nav>
+                <section class="attestation">
+                    <div class="attestation__container">
+                        <div data-prlx-mouse-wrapper class="banner attestation__banner">
+                            <img data-src="@content/svg/attestation/decor.svg" class="banner__decor" alt="Декор">
+                            <svg data-prlx-mouse data-prlx-a="20" class="banner__circle banner__circle--1">
+                                <use href="@content/icons/sprite.svg#circle"></use>
+                            </svg>
+                            <svg data-prlx-mouse data-prlx-a="20" class="banner__circle banner__circle--2">
+                                <use href="@content/icons/sprite.svg#circle"></use>
+                            </svg>
+                            <svg data-prlx-mouse data-prlx-a="20" class="banner__triangle banner__triangle--1">
+                                <use href="@content/icons/sprite.svg#triangle"></use>
+                            </svg>
+                            <svg data-prlx-mouse data-prlx-a="20" class="banner__triangle banner__triangle--2">
+                                <use href="@content/icons/sprite.svg#triangle"></use>
+                            </svg>
+                            <svg data-prlx-mouse data-prlx-a="20" class="banner__triangle banner__triangle--3">
+                                <use href="@content/icons/sprite.svg#triangle"></use>
+                            </svg>
+                            <div  class="info-banner banner__info">
+                                <div class="info-banner__header">
+                                    <div class="info-banner__title">Стоимость аттестации</div>
+                                    <div class="info-banner__price">3000 ₽</div>
+                                </div>
+                                <div class="info-banner__body">
+                                    <div class="info-banner__term">Оформление <span>1 день</span></div>
+                                    <div class="info-banner__text">Срок действия I, II, III, IV группы <span>1 год</span> V группа 1 или <span>3 года</span></div>
+                                </div>
+                                <a href="#" aria-label="Заказать аттестат" class="button button--blue info-banner__button">ЗАКАЗАТЬ</a>
+                            </div>
+                            <div class="body-banner banner__body">
+                                <h1 class="title title--small body-banner__title">Аттестация по электробезопасности</h1>
+                                <div class="body-banner__text">На все группы допуска до и свыше 1000В с отметкой ГосТехНадзора. Вместе с удостоверением Вы получаете протокол экзаменационной комиссии РосТехНадзора.</div>
+                            </div>
+                            <div class="banner__image-ibg">
+                                <img data-src="@content/img/attestation/attestat.png" alt="Аттестат">
+                            </div>
+                        </div>
+                        <div class="body-attestation">
+                            <div class="body-attestation__text">Обучение по электробезопасности персонала - обязательное условие для предприятий, чьи сотрудники работают с электричеством и электрическим оборудованием.</div>
+                            <h2 class="body-attestation__title">Кому необходимо проходить обучение?</h2>
+                            <div class="body-attestation__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.</div>
+                            <h2 class="body-attestation__title body-attestation__title--small">Таким образом, повышение квалификации обязаны проходить:</h2>
+                            <ul class="body-attestation__list">
+                                <li class="body-attestation__item">Сотрудники, впервые поступающим на работу, связанную с обслуживанием электрооборудования;</li>
+                                <li class="body-attestation__item">Работники, не проходившие проверки знаний 3 года и более;</li>
+                                <li class="body-attestation__item">Сотрудники, претендующие на повышение группы допуска;</li>
+                                <li class="body-attestation__item">Неэлектротехнический персонал, деятельность которого прямо или косвенно связана с обслуживанием установок.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="guarantees">
+                    <div class="guarantees__container">
+                        @@include('html/modules/title.htm',{
+                        "class":" guarantees__title",
+                        "title":"Какие гарантии вы получаете?",
+                        "tag":"h3"
+                        })
+                        <div class="guarantees__cards">
+                            @@include('html/modules/guarantee.htm',{
+                            "class":" guarantees__guarantee",
+                            "img":"content/svg/guarantees/files.svg",
+                            "alt":"Файлы",
+                            "title":"Документы в срок",
+                            "text":"Мы четко соблюдаем сроки, так как дорожим вашим временем"
+                            })
+                            @@include('html/modules/guarantee.htm',{
+                            "class":" guarantees__guarantee",
+                            "img":"content/svg/guarantees/favorites.svg",
+                            "alt":"Фаворит",
+                            "title":"100% качество наших услуг",
+                            "text":"Мы несем полную ответственность за свою работу"
+                            })
+                            @@include('html/modules/guarantee.htm',{
+                            "class":" guarantees__guarantee",
+                            "img":"content/svg/guarantees/document.svg",
+                            "alt":"Документы",
+                            "title":"Гарантия подлинности документов",
+                            "text":"У нас есть все необходимые лицензии и сертификаты"
+                            })
+                            @@include('html/modules/guarantee.htm',{
+                            "class":" guarantees__guarantee",
+                            "img":"content/svg/guarantees/delivery-truck.svg",
+                            "alt":"Доставка",
+                            "title":"Гарантия быстрой доставки по всей России.",
+                            "text":"Доставляем в любой город России"
+                            })
+                        </div>
+                    </div>
+                </section>
+                <section data-prlx-mouse-wrapper class="security">
+                    <svg data-prlx-mouse class="security__decor security__decor--1">
+                        <use href="@content/icons/sprite.svg#triangle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--2">
+                        <use href="@content/icons/sprite.svg#triangle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--3">
+                        <use href="@content/icons/sprite.svg#triangle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--4">
+                        <use href="@content/icons/sprite.svg#triangle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--5">
+                        <use href="@content/icons/sprite.svg#triangle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--6">
+                        <use href="@content/icons/sprite.svg#triangle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--7">
+                        <use href="@content/icons/sprite.svg#triangle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--8">
+                        <use href="@content/icons/sprite.svg#circle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--9">
+                        <use href="@content/icons/sprite.svg#circle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--10">
+                        <use href="@content/icons/sprite.svg#circle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--11">
+                        <use href="@content/icons/sprite.svg#circle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--12">
+                        <use href="@content/icons/sprite.svg#circle"></use>
+                    </svg>
+                    <svg data-prlx-mouse class="security__decor security__decor--13">
+                        <use href="@content/icons/sprite.svg#circle"></use>
+                    </svg>
+                    <div class="security__container">
+                        @@include('html/modules/title.htm',{
+                        "class":" title--light security__title",
+                        "title":"Удостоверение по безопасности",
+                        "tag":"h4"
+                        })
+                        <form action="#" data-goto-error class="form-security security__form">
+                            <div class="form-security__row">
+                                <div class="form-security__column">
+                                    <label class="form-security__label" for="full-name">Ф.И.О. полностью</label>
+                                    <input autocomplete="off" id="full-name" aria-label="Поле формы" data-required type="text" name="form[]" class="form-security__input">
+                                </div>
+                                <div class="form-security__column">
+                                    <label class="form-security__label" for="proffesion">Название должности/профессии</label>
+                                    <input autocomplete="off" id="proffesion" aria-label="Поле формы" data-required type="text" name="form[]" class="form-security__input">
+                                </div>
+                                <div class="form-security__column">
+                                    <label class="form-security__label" for="place-job">Если Вы работаете укажите место работы</label>
+                                    <input autocomplete="off" id="place-job" aria-label="Поле формы" data-required type="text" name="form[]" class="form-security__input">
+                                </div>
+                                <div class="form-security__column">
+                                    <label class="form-security__label" for="group">Группа электробезопасности (2,3,4,5)</label>
+                                    <input autocomplete="off" id="group" aria-label="Поле формы" data-required type="text" name="form[]" class="form-security__input">
+                                </div>
+                                <div class="form-security__column">
+                                    <label class="form-security__label" for="check">Причина проверки (первичная или очередная)</label>
+                                    <input autocomplete="off" id="check" aria-label="Поле формы" data-required type="text" name="form[]" class="form-security__input">
+                                </div>
+                                <div class="form-security__column">
+                                    <label class="form-security__label" for="date">Укажите дату выдачи удостоверения, которую прописать в удостоверении</label>
+                                    <input autocomplete="off" id="date" aria-label="Поле формы" data-required type="text" name="form[]" class="form-security__input">
+                                </div>
+                            </div>
+                            <div class="form-security__row">
+                                <input autocomplete="off" type="text" aria-label="Поле формы" data-required name="form[]" data-inputmask="'mask': '+7 (99) 99 - 99 - 99'" placeholder="+7 (__) __ - __ - __" class="form-security__input form-security__input--small">
+                                <input autocomplete="off" type="text" aria-label="Поле формы" data-required="email" name="form[]" placeholder="Email" class="form-security__input form-security__input--small">
+                                <input autocomplete="off" type="text" aria-label="Поле формы" data-required name="form[]" placeholder="Адрес доставки готовых документов (город, адрес, номер телефона, ФИО)" class="form-security__input form-security__input--big">
+                                <button type="submit" class="button form-security__button">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            @@include('html/components/footer.htm',{})
+        </div>
+        @@include('html/components/js.htm',{})
+    </body>
+</html>

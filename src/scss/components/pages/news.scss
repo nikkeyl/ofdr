@@ -1,0 +1,43 @@
+.news {
+    @include adaptive-value("padding-bottom", 68, 40);
+
+    &__container {
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(22);
+        }
+    }
+
+    &__cards {
+        &:not(:last-child) {
+            margin-bottom: rem(47);
+        }
+
+        @media (min-width: em(584)) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: rem(30);
+        }
+    }
+
+    &__news-card {
+        @media (min-width: em($mobile)) {
+            flex: 1 1 25%;
+        }
+
+        @media (max-width: md($mobile)) {
+            flex: 1 1 50%;
+        }
+
+        @media (max-width: md(584)) {
+            max-width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/head.htm',{"title":"Контакты"})
+    <body class="page">
+        <div class="scaffold">
+            @@include('html/components/header.htm',{"class":"","data":""})
+            <main class="content">
+                <nav class="breadcrumbs content__breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__slash">-</li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__current">Контакты</span>
+                        </li>
+                    </ul>
+                </nav>
+                <section class="contact-us">
+                    <div class="contact-us__container">
+                        <img data-src="@content/svg/contacts/map.svg" class="contact-us__img" alt="Карта России">
+                        <div class="contact-us__body">
+                            @@include('html/modules/title.htm',{
+                            "class":" contact-us__title",
+                            "title":"Контакты",
+                            "tag":"h1"
+                            })
+                            <div class="contact-us__sub-title">Мы работаем по всей России</div>
+                            <div class="contacts contact-us__contacts">
+                                <div class="contacts__item">
+                                    <svg class="contacts__icon">
+                                        <use href="@content/icons/sprite.svg#call"></use>
+                                    </svg>
+                                    <a href="tel:88000000000" class="contacts__link">8 800 000-00-00</a>
+                                </div>
+                                <div class="contacts__item">
+                                    <svg class="contacts__icon">
+                                        <use href="@content/icons/sprite.svg#email"></use>
+                                    </svg>
+                                    <a href="mailto:email@email.com" class="contacts__link contacts__link--small">email@email.com</a>
+                                </div>
+                            </div>
+                            @@include('html/modules/socials.htm',{"class":" contact-us__socials","data":""})
+                            <div class="qr-code contact-us__qr-code">
+                                <div class="qr-code__image-ibg">
+                                    <img data-src="@content/svg/contacts/qr-code.svg" alt="кью ар код">
+                                </div>
+                                <div class="qr-code__body">
+                                    <div class="qr-code__title">Все наши контакты в этом QR коде</div>
+                                    <div class="qr-code__text">Считать QR код Вы можете с помощью специального приложения для IOS или Android</div>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="#" data-goto-error class="form-contact-us contact-us__form">
+                            @@include('html/modules/title.htm',{
+                            "class":" title--light title--small form-contact-us__title",
+                            "title":"Форма обратной связи",
+                            "tag":"h1"
+                            })
+                            <input autocomplete="off" type="text" aria-label="Поле формы" name="form[]" data-required placeholder="Как к Вам обращаться?" class="form-contact-us__input">
+                            <textarea autocomplete="off" name="form[]" aria-label="Поле формы" data-required placeholder="Желаемые документы" class="form-contact-us__input"></textarea>
+                            <input autocomplete="off" type="text" aria-label="Поле формы" name="form[]" data-inputmask="'mask': '+7 (99) 99 - 99 - 99'" data-required placeholder="+7 (__) __ - __ - __" class="form-contact-us__input">
+                            <input autocomplete="off" type="text" aria-label="Поле формы" name="form[]" data-required="email" placeholder="Email" class="form-contact-us__input">
+                            <button type="submit" class="button form-contact-us__button">Отправить заявку</button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            @@include('html/components/footer.htm',{})
+        </div>
+        @@include('html/components/js.htm',{})
+    </body>
+</html>

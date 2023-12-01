@@ -1,0 +1,445 @@
+.content {
+    &__breadcrumbs {
+        @include adaptive-value("padding-top", 154 + 25, 154 + 50, 1920, 1168, 1);
+
+        margin: 0 auto;
+        padding: 0 rem(15);
+        max-width: rem(1170);
+
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+
+        @media (max-width: md($mobile)) {
+            padding-top: rem(90);
+        }
+    }
+}
+
+//========================================================================================================================================================//
+.link {
+    $animation: 0;
+
+    &::before {
+    }
+
+    &::after {
+    }
+
+    &:link {
+    }
+
+    &:visited {
+    }
+
+    &:focus {
+    }
+
+    &:active {
+    }
+
+    &:disabled {
+    }
+
+    @if $animation == 1 {
+        @keyframes name {
+            0% {
+            }
+
+            50% {
+            }
+
+            100% {
+            }
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+        }
+    }
+}
+
+//========================================================================================================================================================//
+.text {
+    &__different {
+    }
+}
+
+//========================================================================================================================================================//
+.logo {
+}
+
+//========================================================================================================================================================//
+.label {
+}
+
+//========================================================================================================================================================//
+.title {
+    @include adaptive-value("font-size", 40, 30);
+
+    font-weight: 900;
+    line-height: math.div(51, 40);
+
+    &--light {
+        color: $color-light;
+    }
+
+    &--small {
+        $font-size: 30;
+
+        @include adaptive-value("font-size", $font-size, 20);
+
+        line-height: math.div(38, $font-size);
+    }
+}
+
+//========================================================================================================================================================//
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: rem(13);
+
+        &--end {
+            &:not(:last-child) {
+                margin-bottom: rem(5) !important;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__icon {
+        @include wh(rem(16), rem(16));
+
+        fill: $color-light-blue;
+
+        .contacts--big & {
+            @include wh(rem(22), rem(22));
+
+            fill: $color-light;
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: math.div(24, 20);
+        white-space: nowrap;
+        color: $color-dark;
+        transition: all 0.3s ease;
+
+        &:focus {
+            color: $color-gray;
+        }
+
+        &--small {
+            font-weight: 500;
+            font-size: rem(17);
+            line-height: math.div(20, 17);
+
+            @media (max-width: md($mobile-small)) {
+                $font-size: 14;
+
+                font-size: rem($font-size);
+            }
+        }
+
+        .contacts--big & {
+            color: $color-light;
+        }
+
+        @media (max-width: md($mobile-small)) {
+            $font-size: 14;
+
+            font-size: rem($font-size);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-gray;
+            }
+        }
+    }
+
+    &--end {
+        align-items: flex-end;
+    }
+}
+
+//========================================================================================================================================================//
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(18);
+
+    &__item {
+        @include wh(rem(43), rem(43));
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+
+        &--green {
+            box-shadow: 0 rem(8) rem(25) rgb(45 208 56 / 49.8%);
+            background: #2dd038;
+        }
+
+        &--violet {
+            box-shadow: 0 rem(8) rem(25) rgb(123 81 157 / 50.4%);
+            background: #7b519d;
+        }
+
+        &--blue {
+            box-shadow: 0 rem(8) rem(25) rgb(91 186 240 / 50%);
+            background: #5bbaf0;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: none;
+
+                .socials__icon {
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+
+    &__icon {
+        @include wh(rem(18), rem(18));
+
+        fill: $color-light;
+        transition: all 0.3s ease;
+    }
+}
+
+//========================================================================================================================================================//
+.proffesion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(32) rem(28);
+    max-width: rem(262);
+    box-shadow: 0 rem(2) rem(15) rgb(0 0 0 / 6.78%);
+    background: #fff;
+    transition: all 0.3s ease;
+
+    &__img {
+        img {
+            @include wh(rem(64), rem(64));
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(17);
+        }
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: rem(19);
+        line-height: math.div(23, 19);
+        text-align: center;
+        transition: all 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #5bbaf0;
+            }
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0 rem(7) rem(30) rgb(0 0 0 / 10%);
+        }
+    }
+}
+
+//========================================================================================================================================================//
+.guarantee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: rem(262);
+
+    &__img {
+        @include wh(rem(98), rem(98));
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border: rem(1) solid #e8e8e8;
+        border-radius: 50%;
+        background: $color-light;
+
+        img {
+            @include wh(rem(52), rem(52));
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: rem(22);
+        line-height: math.div(27, 22);
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__text {
+        max-width: rem(210);
+        font-weight: 500;
+        font-size: rem(17);
+        line-height: rem(25);
+        text-align: center;
+    }
+}
+
+//========================================================================================================================================================//
+.study-programm {
+    display: flex;
+    flex-direction: column;
+    padding: rem(25) rem(25) rem(20);
+    max-width: rem(265);
+    box-shadow: 0 rem(2) rem(15) rgb(0 0 0 / 6.78%);
+    background: $color-light;
+
+    &__image-ibg {
+        padding-bottom: percent(182, 265);
+        background-color: $color-gray;
+
+        &:not(:last-child) {
+            margin-bottom: rem(17);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: rem(19);
+        line-height: math.div(23, 19);
+        text-align: center;
+        transition: all 0.3s ease;
+
+        &:not(:last-child) {
+            margin-bottom: rem(5);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-light-blue;
+            }
+        }
+    }
+
+    &__condition {
+        display: flex;
+        align-items: center;
+        gap: rem(7);
+
+        &:not(:last-child) {
+            margin-bottom: rem(17);
+        }
+    }
+
+    &__icon {
+        @include wh(rem(13), rem(13));
+
+        fill: #53b43b;
+    }
+
+    &__label {
+        font-size: rem(16);
+        line-height: math.div(19, 16);
+        text-align: center;
+        color: #53b43b;
+    }
+
+    &__price {
+        font-weight: 800;
+        font-size: rem(22);
+        line-height: rem(27);
+        text-align: center;
+    }
+}
+
+//========================================================================================================================================================//
+.news-card {
+    display: flex;
+    flex-direction: column;
+    padding: rem(27) rem(23) rem(20);
+    height: fit-content;
+    max-width: rem(262);
+    box-shadow: 0 rem(2) rem(15) rgb(0 0 0 / 6.78%);
+    background: $color-light;
+
+    &__image-ibg {
+        padding-bottom: percent(176, 262);
+        background-color: $color-gray;
+
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__time {
+        display: inline-block;
+        font-size: rem(14);
+        line-height: math.div(16, 14);
+        color: #ababab;
+
+        &:not(:last-child) {
+            margin-bottom: rem(13);
+        }
+    }
+
+    &__link {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-bottom: rem(13);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(19);
+        line-height: math.div(23, 19);
+        transition: all 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-light-blue;
+            }
+        }
+    }
+
+    &__text {
+        font-size: rem(16);
+        line-height: math.div(19, 16);
+    }
+}

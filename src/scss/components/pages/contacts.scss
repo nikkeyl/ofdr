@@ -1,0 +1,108 @@
+.contact-us {
+    @include adaptive-value("padding-bottom", 70, 30);
+
+    &__img {
+        @media (min-width: em($mobile)) {
+            @include adaptive-value("top", -238, -150, 1920, 768, 1);
+            @include adaptive-value("width", 1164, 300);
+            @include adaptive-value("height", 1036, 150);
+
+            position: absolute;
+            left: rem(-350);
+        }
+
+        @media (max-width: md($mobile)) {
+            display: none;
+        }
+    }
+
+    &__container {
+        @media (min-width: em($mobile)) {
+            @include grid-cards(fit, rem(75), 1fr, rem(30));
+
+            position: relative;
+        }
+    }
+
+    &__body {
+        z-index: 3;
+
+        @media (max-width: md($mobile)) {
+            &:not(:last-child) {
+                margin-bottom: rem(40);
+            }
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(8);
+        }
+    }
+
+    &__sub-title {
+        font-size: rem(17);
+        line-height: math.div(20, 17);
+
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__contacts {
+        &:not(:last-child) {
+            margin-bottom: rem(50);
+        }
+    }
+
+    &__socials {
+        &:not(:last-child) {
+            margin-bottom: rem(50);
+        }
+    }
+
+    &__qr-code {
+    }
+
+    &__form {
+        z-index: 3;
+
+        @media (min-width: em($mobile)) {
+            align-self: flex-start;
+            justify-self: flex-end;
+            max-width: rem(460);
+        }
+    }
+}
+
+.qr-code {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    gap: rem(25);
+    max-width: rem(550);
+
+    &__image-ibg {
+        @include wh(rem(165), rem(165));
+
+        flex: 0 1 rem(165);
+    }
+
+    &__body {
+        flex: 0 1 rem(360);
+    }
+
+    &__title {
+        font-weight: 700;
+        line-height: math.div(22, 18);
+
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__text {
+        font-size: rem(16);
+        line-height: math.div(22, 16);
+    }
+}

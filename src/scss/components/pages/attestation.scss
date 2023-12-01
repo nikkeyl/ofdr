@@ -1,0 +1,408 @@
+.security {
+    @include adaptive-value("padding-top", 47, 30);
+    @include adaptive-value("padding-bottom", 60, 30);
+
+    background-color: #86adef;
+
+    &__decor {
+        @media (min-width: em($mobile)) {
+            position: absolute;
+            fill: none;
+            stroke: rgb(255 255 255 / 80%);
+
+            &--1 {
+                @include wh(rem(16), rem(16));
+
+                left: percent(110, $max-width);
+                top: rem(82);
+            }
+
+            &--2 {
+                @include wh(rem(21), rem(21));
+
+                left: percent(151, $max-width);
+                top: rem(183);
+            }
+
+            &--3 {
+                @include wh(rem(21), rem(21));
+
+                left: percent(183, $max-width);
+                bottom: rem(118);
+            }
+
+            &--4 {
+                @include wh(rem(21), rem(21));
+
+                left: percent(1098, $max-width);
+                top: rem(68);
+            }
+
+            &--5 {
+                @include wh(rem(16), rem(16));
+
+                right: percent(260, $max-width);
+                top: rem(76);
+            }
+
+            &--6 {
+                @include wh(rem(21), rem(21));
+
+                right: percent(217, $max-width);
+                top: rem(120);
+            }
+
+            &--7 {
+                @include wh(rem(21), rem(21));
+
+                right: percent(153, $max-width);
+                top: rem(254);
+            }
+
+            &--8 {
+                @include wh(rem(26), rem(26));
+
+                left: percent(211, $max-width);
+                top: rem(114);
+            }
+
+            &--9 {
+                @include wh(rem(16), rem(16));
+
+                left: percent(64, $max-width);
+                top: rem(311);
+            }
+
+            &--10 {
+                @include wh(rem(26), rem(26));
+
+                left: percent(1151, $max-width);
+                top: rem(47);
+            }
+
+            &--11 {
+                @include wh(rem(26), rem(26));
+
+                right: percent(168, $max-width);
+                top: rem(98);
+            }
+
+            &--12 {
+                @include wh(rem(21), rem(21));
+
+                right: percent(66, $max-width);
+                bottom: rem(147);
+            }
+
+            &--13 {
+                @include wh(rem(11), rem(11));
+
+                right: percent(206, $max-width);
+                bottom: rem(81);
+            }
+        }
+
+        @media (max-width: md($mobile)) {
+            display: none;
+        }
+    }
+
+    &__container {
+        @media (min-width: em($mobile)) {
+            position: relative;
+            z-index: 3;
+        }
+    }
+
+    &__form {
+    }
+
+    @media (min-width: em($mobile)) {
+        position: relative;
+    }
+}
+
+//========================================================================================================================================================//
+.attestation {
+    @include adaptive-value("padding-bottom", 60, 30);
+
+    &__container {
+    }
+
+    &__banner {
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__body {
+    }
+}
+
+.banner {
+    @include adaptive-value("padding-right", 40, 10);
+    @include adaptive-value("padding-left", 40, 10);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+    padding: rem(40) rem(55);
+    background-color: #fafafb;
+
+    &__circle {
+        &--1 {
+            @include wh(rem(26), rem(26));
+
+            left: percent(748, 1140);
+            top: rem(48);
+            stroke: #0062ff;
+        }
+
+        &--2 {
+            @include wh(rem(11), rem(11));
+
+            left: percent(559, 1440);
+
+            // left: rem(559);
+            bottom: rem(42);
+            stroke: #86aef0;
+        }
+    }
+
+    &__triangle {
+        &--1 {
+            @include wh(rem(16), rem(16));
+
+            left: percent(680, 1440);
+            top: rem(26);
+            stroke: #939393;
+
+            // left: rem(680)
+        }
+
+        &--2 {
+            @include wh(rem(21), rem(21));
+
+            left: percent(715, 1440);
+            top: rem(69);
+            stroke: #efa159
+
+            // left: rem(715)
+        }
+
+        &--3 {
+            @include wh(rem(21), rem(21));
+
+            left: percent(611, 1440);
+            bottom: rem(54);
+            stroke: #efa159;
+
+            // left: rem(611)
+        }
+    }
+
+    &__decor {
+        @media (min-width: em(805)) {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+        }
+
+        @media (max-width: md(805)) {
+            display: none;
+        }
+    }
+
+    &__info {
+        flex: 0 1 rem(188);
+    }
+
+    &__body {
+        flex: 0 1 rem(430);
+        width: rem(460);
+    }
+
+    &__image-ibg {
+        z-index: 2;
+        flex: 0 1 rem(340);
+        height: rem(254);
+
+        @media (max-width: md(1065)) {
+        }
+    }
+
+    &__circle,
+    &__triangle {
+        @media (min-width: em(805)) {
+            position: absolute;
+            fill: none;
+        }
+
+        @media (max-width: md(805)) {
+            display: none;
+        }
+    }
+
+    &__info,
+    &__body {
+        @media (min-width: em(805)) {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    @media (min-width: em(805)) {
+        position: relative;
+    }
+
+    @media (min-width: em(805)) {
+        position: relative;
+    }
+
+    @media (max-width: md(805)) {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.info-banner {
+    &__header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+        padding-bottom: rem(15);
+
+        &::after {
+            @include pseudo;
+
+            left: 50%;
+            bottom: 0;
+            width: 65%;
+            height: rem(2);
+            background-color: #87b0ee;
+            transform: translateX(-50%);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+    }
+
+    &__title {
+        $font-size: 15;
+
+        font-size: rem($font-size);
+        line-height: math.div(18, $font-size);
+        text-align: center;
+    }
+
+    &__price {
+        font-weight: 800;
+        font-size: rem(36);
+        line-height: math.div(44, 36);
+        text-align: center;
+        color: #87b0ee;
+    }
+
+    &__body {
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+    }
+
+    &__term {
+        text-align: center;
+
+        span {
+            font-weight: 700;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__text {
+        font-size: rem(15);
+        line-height: math.div(24, 15);
+        text-align: center;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        width: 100%;
+    }
+}
+
+.body-banner {
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__text {
+        font-size: rem(17);
+        line-height: math.div(26, 17);
+    }
+}
+
+.body-attestation {
+    &__text {
+        font-weight: 400;
+        line-height: math.div(24, 18);
+
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: rem(24);
+        line-height: math.div(29, 24);
+
+        &--small {
+            font-weight: 700;
+            font-size: rem(19);
+            line-height: math.div(24, 19);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__list {
+        @include adaptive-value("padding-left", 60, 0);
+    }
+
+    &__item {
+        position: relative;
+        padding-left: rem(23);
+        font-weight: 400;
+        line-height: math.div(21, 18);
+
+        &::before {
+            @include pseudo;
+            @include wh(rem(9), rem(9));
+
+            left: 0;
+            top: 50%;
+            border-radius: 50%;
+            background-color: #87b0ee;
+            transform: translateY(-50%);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+}

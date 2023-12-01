@@ -1,0 +1,102 @@
+.menu {
+    &__body {
+        @media (max-width: md($mobile)) {
+            @include wh(100%, 100%);
+
+            position: fixed;
+            left: -100%;
+            top: 0;
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            overflow: auto;
+            padding: rem(100) rem(15) rem(20) rem(15);
+            background-color: $color-light;
+            transition: all 0.3s ease;
+
+            &::before {
+                @include pseudo($position: fixed);
+                @include adaptive-value("height", 76, 70, 767.98, 320, 1);
+
+                left: -100%;
+                top: 0;
+                width: 100%;
+                background-color: #f6f6f6;
+            }
+
+            .menu-open & {
+                left: 0;
+
+                &::before {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        @media (max-width: md($mobile)) {
+        }
+    }
+
+    &__item {
+    }
+
+    &__link {
+        $font-size: 16;
+
+        font-size: rem($font-size);
+        line-height: math.div(19, $font-size);
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+
+        .header--no-bg & {
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $color-gray;
+                }
+            }
+        }
+
+        .header--no-bg.header-scroll & {
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $color-light-blue;
+                }
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-light-blue;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: rem(56.5);
+        row-gap: rem(10);
+
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+
+        @media (min-width: em($mobile)) {
+            margin: percent(0.5, 60) 0;
+        }
+
+        @media (max-width: md($mobile)) {
+            flex-direction: column;
+            align-items: flex-end;
+            row-gap: rem(20);
+        }
+    }
+
+    @media (min-width: em($mobile)) {
+        padding: rem(10) 0;
+        min-height: rem(60);
+    }
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/head.htm',{"title":"Главная"})
+    <body class="page">
+        <div class="scaffold">
+            @@include('html/components/header.htm',{"class":" header--no-bg","data":"data-scroll"})
+            <main class="content">
+                <section class="home">
+                    <img src="@content/svg/home/decor.svg" class="home__decor" alt="Декор">
+                    <div class="home__container">
+                        <div class="home__body">
+                            @@include('html/modules/title.htm',{
+                            "class":" home__title",
+                            "title":"Оформление допусков, удостоверений всех строительных и рабочих специальностей",
+                            "tag":"h1"
+                            })
+                            <div class="home__sub-title">аттестация ИТР <span class="home__sub-title-span">от 2 500 руб</span></div>
+                            <a href="#" aria-label="Заказать" class="button button--blue home__button">заказать</a>
+                        </div>
+                        <div class="home__image-ibg">
+                            <img src="@content/img/home/man.png" alt="Работник">
+                        </div>
+                    </div>
+                </section>
+                <section class="documents">
+                    <div class="documents__container">
+                        @@include('html/modules/title.htm',{
+                        "class":" documents__title",
+                        "title":"Какие документы хотите оформить?",
+                        "tag":"h2"
+                        })
+                        <div class="documents__cards">
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/fireman.svg",
+                            "alt":"Пожарный",
+                            "text":"Гражданская оборона и ЧС"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/crane.svg",
+                            "alt":"Кран",
+                            "text":"Работы на высоте"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/excavator.svg",
+                            "alt":"Экскаватор",
+                            "text":"Дорожно-строительная техника"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/settings.svg",
+                            "alt":"Контроль",
+                            "text":"Неразрушающий контроль"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/toxic-waste.svg",
+                            "alt":"ДОПОГ",
+                            "text":"Опасные грузы (ДОПОГ)"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/worker.svg",
+                            "alt":"Рабочий",
+                            "text":"Охрана труда"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/fire-extinguisher.svg",
+                            "alt":"Огне-тушитель",
+                            "text":"Пожарно-технический минимум"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/factory.svg",
+                            "alt":"Фабрика",
+                            "text":"Промышленная безопасность"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/engineer.svg",
+                            "alt":"Инженер",
+                            "text":"Обучение по рабочим профессиям"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/plug.svg",
+                            "alt":"Энергия",
+                            "text":"Энергетическая безопасность"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/curve.svg",
+                            "alt":"ПДД",
+                            "text":"Безопасность дорожного движения"
+                            })
+                            @@include('html/modules/proffesion.htm',{
+                            "class":" documents__card",
+                            "img":"content/svg/documents/tracktor.svg",
+                            "alt":"Трактор",
+                            "text":"Права на спецтехнику"
+                            })
+                        </div>
+                    </div>
+                </section>
+                <div class="guarantees">
+                    <div class="guarantees__container">
+                        <div class="guarantees__cards">
+                            @@include('html/modules/guarantee.htm',{
+                            "class":" guarantees__guarantee",
+                            "img":"content/svg/guarantees/files.svg",
+                            "alt":"Файлы",
+                            "title":"Документы в срок",
+                            "text":"Мы четко соблюдаем сроки, так как дорожим вашим временем"
+                            })
+                            @@include('html/modules/guarantee.htm',{
+                            "class":" guarantees__guarantee",
+                            "img":"content/svg/guarantees/favorites.svg",
+                            "alt":"Фаворит",
+                            "title":"100% качество наших услуг",
+                            "text":"Мы несем полную ответственность за свою работу"
+                            })
+                            @@include('html/modules/guarantee.htm',{
+                            "class":" guarantees__guarantee",
+                            "img":"content/svg/guarantees/document.svg",
+                            "alt":"Документы",
+                            "title":"Гарантия подлинности документов",
+                            "text":"У нас есть все необходимые лицензии и сертификаты"
+                            })
+                            @@include('html/modules/guarantee.htm',{
+                            "class":" guarantees__guarantee",
+                            "img":"content/svg/guarantees/delivery-truck.svg",
+                            "alt":"Доставка",
+                            "title":"Гарантия быстрой доставки по всей России.",
+                            "text":"Доставляем в любой город России"
+                            })
+                        </div>
+                    </div>
+                </div>
+                <section class="study-programms">
+                    <div class="study-programms__container">
+                        @@include('html/modules/title.htm',{
+                        "class":" study-programms__title",
+                        "title":"Образовательные программы",
+                        "tag":"h3"
+                        })
+                        <div class="study-programms__slider swiper">
+                            <div class="study-programms__wrapper swiper-wrapper">
+                                <div class="study-programms__slide swiper-slide">
+                                    @@include('html/modules/study.htm',{
+                                    "class":" study-programms__study-programm",
+                                    "img":"content/img/programms/img1.jpg",
+                                    "alt":"Огне-тушители"
+                                    })
+                                </div>
+                                <div class="study-programms__slide swiper-slide">
+                                    @@include('html/modules/study.htm',{
+                                    "class":" study-programms__study-programm",
+                                    "img":"content/img/programms/img2.jpg",
+                                    "alt":"МЧС России"
+                                    })
+                                </div>
+                                <div class="study-programms__slide swiper-slide">
+                                    @@include('html/modules/study.htm',{
+                                    "class":" study-programms__study-programm",
+                                    "img":"content/img/programms/img3.jpg",
+                                    "alt":"Трактора"
+                                    })
+                                </div>
+                                <div class="study-programms__slide swiper-slide">
+                                    @@include('html/modules/study.htm',{
+                                    "class":" study-programms__study-programm",
+                                    "img":"content/img/programms/img4.jpg",
+                                    "alt":"Завод"
+                                    })
+                                </div>
+                                <div class="study-programms__slide swiper-slide">
+                                    @@include('html/modules/study.htm',{
+                                    "class":" study-programms__study-programm",
+                                    "img":"content/img/programms/img3.jpg",
+                                    "alt":"Трактора"
+                                    })
+                                </div>
+                                <div class="study-programms__slide swiper-slide">
+                                    @@include('html/modules/study.htm',{
+                                    "class":" study-programms__study-programm",
+                                    "img":"content/img/programms/img4.jpg",
+                                    "alt":"Завод"
+                                    })
+                                </div>
+                                <div class="study-programms__slide swiper-slide">
+                                    @@include('html/modules/study.htm',{
+                                    "class":" study-programms__study-programm",
+                                    "img":"content/img/programms/img1.jpg",
+                                    "alt":"Огне-тушители"
+                                    })
+                                </div>
+                                <div class="study-programms__slide swiper-slide">
+                                    @@include('html/modules/study.htm',{
+                                    "class":" study-programms__study-programm",
+                                    "img":"content/img/programms/img2.jpg",
+                                    "alt":"МЧС России"
+                                    })
+                                </div>
+                            </div>
+                            <div class="swiper-pagination study-programms__pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="certificats">
+                    <div class="certificats__container">
+                        @@include('html/modules/title.htm',{
+                        "class":" certificats__title",
+                        "title":"Примеры допусков и сертификатов",
+                        "tag":"h4"
+                        })
+                        <div class="certificats__slides">
+                            <button type="button" aria-label="button prev" class="swiper-button-prev">
+                                <svg class="certificats__icon">
+                                    <use href="@content/icons/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="certificats__slider swiper">
+                                <div class="certificats__wrapper swiper-wrapper">
+                                    <div class="certificats__slide swiper-slide">
+                                        <div class="certificats__image-ibg">
+                                            <img data-src="@content/img/certificats/img1.jpg" alt="Документы">
+                                        </div>
+                                    </div>
+                                    <div class="certificats__slide swiper-slide">
+                                        <div class="certificats__image-ibg">
+                                            <img data-src="@content/img/certificats/img2.jpg" alt="Документы">
+                                        </div>
+                                    </div>
+                                    <div class="certificats__slide swiper-slide">
+                                        <div class="certificats__image-ibg">
+                                            <img data-src="@content/img/certificats/img3.jpg" alt="Документы">
+                                        </div>
+                                    </div>
+                                    <div class="certificats__slide swiper-slide">
+                                        <div class="certificats__image-ibg">
+                                            <img data-src="@content/img/certificats/img4.jpg" alt="Документы">
+                                        </div>
+                                    </div>
+                                    <div class="certificats__slide swiper-slide">
+                                        <div class="certificats__image-ibg">
+                                            <img data-src="@content/img/certificats/img4.jpg" alt="Документы">
+                                        </div>
+                                    </div>
+                                    <div class="certificats__slide swiper-slide">
+                                        <div class="certificats__image-ibg">
+                                            <img data-src="@content/img/certificats/img2.jpg" alt="Документы">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" aria-label="button next" class="swiper-button-next">
+                                <svg class="certificats__icon">
+                                    <use href="@content/icons/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section class="news-and-stocks">
+                    <div class="news-and-stocks__container">
+                        @@include('html/modules/title.htm',{
+                        "class":" news-and-stocks__title",
+                        "title":"Новости и акции",
+                        "tag":"h5"
+                        })
+                        <div class="news-and-stocks__body">
+                            <div class="gift-stocks news-and-stocks__gift">
+                                <img data-src="@content/svg/news/decor.svg" class="gift-stocks__decor" alt="декор">
+                                <div class="gift-stocks__body">
+                                    <div class="gift-stocks__title">Получи в подарок удостоверение абсолютно <span>бесплатно</span></div>
+                                    <div class="gift-stocks__text">каждое 5-е удостоверение мы выдаем в подарок. Акция рассчитана на единовременное оформление от 5 и более удостоверений</div>
+                                </div>
+                                <div class="gift-stocks__image-ibg">
+                                    <img data-src="@content/img/news/passport.png" alt="Удостоверение">
+                                </div>
+                            </div>
+                            <div class="news-and-stocks__cards">
+                                @@include('html/modules/news.htm',{
+                                "class":" news-and-stocks__card",
+                                "img":"content/img/news/preview1.jpg",
+                                "alt":"Гражданская оборона"
+                                })
+                                @@include('html/modules/news.htm',{
+                                "class":" news-and-stocks__card",
+                                "img":"content/img/news/preview2.jpg",
+                                "alt":"Гражданская оборона"
+                                })
+                            </div>
+                        </div>
+                        <a href="news.html" class="button button--border news-and-stocks__button">ВСЕ НОВОСТИ</a>
+                    </div>
+                </section>
+            </main>
+            @@include('html/components/footer.htm',{})
+        </div>
+        @@include('html/components/js.htm',{})
+    </body>
+</html>

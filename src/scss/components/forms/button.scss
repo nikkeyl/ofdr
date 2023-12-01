@@ -1,0 +1,63 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    border-radius: rem(3);
+    padding: rem(14) rem(15);
+    box-shadow: 0 rem(8) rem(15) rgb(242 147 81 / 44.9%);
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(21, 18);
+    text-align: center;
+    color: $color-light;
+    background: linear-gradient(90deg, #f6bd60 0%, #e88952 100%);
+    transition: all 0.3s ease;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &:active {
+        transform: translateY(rem(3));
+    }
+
+    &--small {
+        font-weight: 800;
+        font-size: rem(15);
+        line-height: math.div(18, 15);
+    }
+
+    &--blue {
+        padding: rem(16) rem(15);
+        box-shadow: 0 rem(12) rem(20) rgb(132 170 237 / 45.5%);
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: math.div(19, 16);
+        text-transform: uppercase;
+        color: $color-light;
+        background: linear-gradient(90deg, #87aff1 0%, #6c80cb 100%);
+    }
+
+    &--border {
+        border: rem(2) solid #6d81cc;
+        box-shadow: none;
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: math.div(19, 16);
+        text-transform: uppercase;
+        color: #6d81cc;
+        background: transparent;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-light;
+                background: #6d81cc;
+            }
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}

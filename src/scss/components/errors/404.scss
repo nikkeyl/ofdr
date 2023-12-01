@@ -1,0 +1,44 @@
+.error {
+    @include adaptive-value("padding-top", 220, 132, 1920, 768, 1);
+    @include adaptive-value("padding-bottom", 127, 30);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        @include adaptive-value("font-size", 300, 150);
+
+        font-weight: 900;
+        line-height: math.div(363, 300);
+        color: #86adef;
+
+        &:not(:last-child) {
+            margin-bottom: rem(40);
+        }
+    }
+
+    &__text {
+        @include adaptive-value("font-size", 30, 18);
+
+        line-height: math.div(36, 30);
+        text-align: center;
+    }
+
+    &__link {
+        text-decoration: underline !important;
+        color: $color-light-blue;
+
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
+    }
+
+    @media (max-width: md($mobile)) {
+        padding-top: rem(90);
+    }
+}

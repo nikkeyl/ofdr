@@ -1,0 +1,58 @@
+<header data-lp data-scroll-show @@data class="header@@class">
+    <div class="header__container">
+        <div class="body-header header__body">
+            <a href="index.html" class="logo body-header__logo">
+                <div class="logo__text">ofdr</div>
+                <div class="logo__info">центр профессиональной дистанционной переподготовки кадров</div>
+            </a>
+            @@include('../modules/socials.htm',{
+            "class":" body-header__socials",
+            "data":"data-da=\".menu__body, 624.98\""
+            })
+            <div class="body-header__actions">
+                <div class="contacts contacts--end body-header__contacts">
+                    <div class="contacts__item contacts__item--end">
+                        <svg class="contacts__icon">
+                            <use href="@content/icons/sprite.svg#call"></use>
+                        </svg>
+                        <a href="tel:88000000000" class="contacts__link">8 800 000-00-00</a>
+                    </div>
+                    <div class="contacts__item contacts__item--end">
+                        <svg class="contacts__icon">
+                            <use href="@content/icons/sprite.svg#email"></use>
+                        </svg>
+                        <a href="mailto:email@email.com" class="contacts__link contacts__link--small">email@email.com</a>
+                    </div>
+                </div>
+                <a href="contacts.html" data-da=".menu__body, 767.98" class="button body-header__button">Заказать звонок</a>
+                @@include('./burger.htm',{
+                "class":"body-header__icon"
+                })
+            </div>
+        </div>
+        <div class="menu">
+            <nav class="menu__body">
+                <ul class="menu__list">
+                    <li>
+                        <a href="courses.html" class="menu__link">Курсы</a>
+                    </li>
+                    <li>
+                        <a href="attestation.html" class="menu__link">АТТЕСТАЦИЯ</a>
+                    </li>
+                    <li>
+                        <a href="work.html" class="menu__link">ОХРАНА ТРУДА</a>
+                    </li>
+                    <li>
+                        <a href="fire.html" class="menu__link">ПОЖАРНАЯ БЕЗОПАСНОСТЬ</a>
+                    </li>
+                    <li>
+                        <a href="dopog.html" class="menu__link">СВИДЕТЕЛЬСТВО ДОПОГ</a>
+                    </li>
+                    <li>
+                        <a href="rights.html" class="menu__link">ПРАВА НА СПЕЦТЕХНИКУ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

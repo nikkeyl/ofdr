@@ -1,0 +1,146 @@
+@import "./menu";
+@import "./icon-menu";
+
+//HEADER========================================================================================================================================================//
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    width: 100%;
+    box-shadow: 0 rem(2) rem(15) rgb(0 0 0 / 14.9%);
+    background: #f6f6f6;
+
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__menu {
+    }
+
+    &--no-bg {
+        box-shadow: none;
+        background: transparent;
+        transition: all 0.3s ease;
+
+        &.header-scroll {
+            box-shadow: 0 rem(2) rem(15) rgb(0 0 0 / 14.9%);
+            background: #f6f6f6;
+        }
+
+        .lock & {
+            transition: none;
+        }
+    }
+}
+
+.body-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+    padding: rem(10) 0 rem(10) 0;
+    min-height: rem(70);
+    transition: margin-top 0.3s ease;
+
+    &__logo {
+        z-index: 5;
+        flex: 0 0 auto;
+    }
+
+    &__actions {
+        @include adaptive-value("gap", 30, 10, 1920, 768, 1);
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media (min-width: em($mobile)) {
+            flex: 0 0 rem(400);
+        }
+
+        @media (max-width: md(1015)) {
+            flex: 0 0 rem(385);
+        }
+
+        @media (max-width: md($mobile)) {
+            flex: 0 0 auto;
+        }
+    }
+
+    &__socials {
+        @media (min-width: em(625)) and (max-width: md($mobile)) {
+            z-index: 5;
+        }
+    }
+
+    &__contacts {
+        z-index: 5;
+    }
+
+    &__button {
+        @media (max-width: md($mobile)) {
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+        }
+    }
+
+    .header-scroll & {
+        @include adaptive-value("margin-top", -94, -76, 1920, 768, 2);
+    }
+
+    .header-show & {
+        margin-top: 0;
+    }
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(36);
+    max-width: rem(380);
+
+    &__text {
+        @include adaptive-value("font-size", 60, 30);
+
+        position: relative;
+        font-weight: 700;
+        line-height: math.div(74, 60);
+        text-transform: uppercase;
+        color: #e1e1e1;
+
+        &:not(:last-child) {
+            &::after {
+                @include pseudo;
+
+                right: rem(-18);
+                top: 50%;
+                width: rem(2);
+                height: rem(40);
+                background-color: #89afef;
+                transform: translateY(-50%);
+
+                @media (max-width: md($tablet)) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__info {
+        flex: 0 1 rem(180);
+        font-size: rem(14);
+        line-height: math.div(16, 14);
+        color: #5d5d5d;
+        cursor: auto;
+        touch-action: none;
+
+        @media (max-width: md(1015)) {
+            display: none;
+        }
+    }
+}

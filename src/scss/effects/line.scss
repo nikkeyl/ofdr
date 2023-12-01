@@ -1,0 +1,18 @@
+.hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: $color-purple;
+    will-change: transform;
+
+    &__text {
+        display: block;
+        padding: rem(20) rem(30);
+        color: $color-light;
+        will-change: transform;
+    }
+}

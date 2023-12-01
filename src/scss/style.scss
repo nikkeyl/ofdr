@@ -1,0 +1,50 @@
+@use "sass:math";
+
+@import "settings/functions";
+@import "settings/mixins";
+@import "settings/fonts/gFonts";
+@import "settings/fonts/fonts";
+@import "settings/variables";
+@import "settings/null";
+@import "settings/page";
+@import "settings/scaffold";
+@import "settings/container";
+@import "settings/templates";
+@import "components/common";
+
+// @import "modules/colorScheme";
+// @import "modules/fullScreen";
+// @import "modules/sticky";
+@import "modules/ibg";
+
+// @import "components/progressBar";
+@import "components/breadCrumbs";
+@import "components/forms/forms";
+@import "components/header/header";
+
+// @import "components/changeStyle";
+@import "components/pagination";
+
+// @import "components/changeFont";
+// @import "components/preloader";
+// @import "components/spollers";
+
+// @import "components/showMore";
+// @import "components/marquee";
+@import "components/footer";
+
+// @import "components/popup";
+// @import "components/tabs";
+// @import "components/maps";
+
+@import "effects/effects";
+
+// @import "effects/ripple";
+// @import "effects/glitch";
+// @import "effects/line";
+
+@import "components/errors/404";
+@import "components/pages/home";
+@import "components/pages/news";
+@import "components/pages/contacts";
+@import "components/pages/attestation";

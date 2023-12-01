@@ -1,0 +1,140 @@
+// @import "quantity";
+// @import "checkbox";
+@import "button";
+
+// @import "select";
+// @import "rating";
+// @import "input";
+// @import "radio";
+// @import "range";
+
+.form-security {
+    display: flex;
+    flex-direction: column;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: rem(30);
+        row-gap: rem(17);
+        padding: rem(30) 0;
+
+        &:not(:last-child) {
+            border-bottom: rem(1) solid #678bc7;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex: 1 1 rem(360);
+        flex-direction: column;
+        align-self: flex-end;
+        gap: rem(10);
+        width: rem(360);
+
+        @media (max-width: md(1170)) {
+            flex: 1 1 rem(500);
+            width: rem(500);
+        }
+    }
+
+    &__label {
+        font-size: rem(17);
+        line-height: math.div(20, 17);
+        color: #516c9a;
+        transition: color 0.3s ease;
+
+        .form-error & {
+            color: #ff0;
+        }
+    }
+
+    &__input {
+        border-radius: rem(2);
+        padding: rem(10);
+        height: rem(46);
+        background: $color-light;
+        transition: all 0.3s ease;
+
+        &.form-error {
+            border: rem(1) solid #f00;
+
+            &::placeholder {
+                color: #f00;
+            }
+        }
+
+        &--small {
+            flex: 0 1 rem(165);
+            width: rem(165);
+
+            @media (max-width: md(599)) {
+                flex: 1 1 rem(165);
+            }
+        }
+
+        &--big {
+            flex: 1 1 auto;
+            font-size: rem(14);
+            line-height: math.div(16, 14);
+        }
+    }
+
+    &__button {
+        @media (max-width: md(811)) {
+            width: 100%;
+        }
+    }
+}
+
+.form-contact-us {
+    @include adaptive-value("padding-right", 60, 20);
+    @include adaptive-value("padding-left", 60, 20);
+
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(25);
+    padding-bottom: rem(35);
+    box-shadow: 0 rem(2) rem(6) rgb(38 54 77 / 27.6%);
+    background: #87b0ee;
+
+    &__title {
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__input {
+        border-radius: rem(3);
+        padding: rem(12) rem(16);
+        width: 100%;
+        font-size: rem(15);
+        line-height: math.div(18, 15);
+        color: #7b7b7b;
+        background: $color-light;
+        transition: all 0.3s ease;
+
+        &.form-error {
+            color: rgb(236 41 41);
+
+            &::placeholder {
+                color: rgb(236 41 41);
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(14);
+        }
+    }
+
+    &__button {
+        align-self: center;
+    }
+}
+
+textarea.form-contact-us__input {
+    min-height: rem(120);
+    resize: none;
+}

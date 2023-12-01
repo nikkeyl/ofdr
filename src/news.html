@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/head.htm',{"title":"Нововсти"})
+    <body class="page">
+        <div class="scaffold">
+            @@include('html/components/header.htm',{"class":"","data":""})
+            <main class="content">
+                <nav class="breadcrumbs content__breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__slash">-</li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__current">Новости</span>
+                        </li>
+                    </ul>
+                </nav>
+                <section class="news">
+                    <div class="news__container">
+                        @@include('html/modules/title.htm',{
+                        "class":" news__title",
+                        "title":"Новости",
+                        "tag":"h1"
+                        })
+                        <div class="news__cards">
+                            @@include('html/modules/news.htm',{
+                            "class":" news__news-card",
+                            "img":"content/img/news/preview1.jpg",
+                            "alt":"Гражданская оборона"
+                            })
+                            @@include('html/modules/news.htm',{
+                            "class":" news__news-card",
+                            "img":"content/img/news/preview2.jpg",
+                            "alt":"Гражданская оборона"
+                            })
+                            @@include('html/modules/news.htm',{
+                            "class":" news__news-card",
+                            "img":"content/img/news/preview3.jpg",
+                            "alt":"Гражданская оборона"
+                            })
+                            @@include('html/modules/news.htm',{
+                            "class":" news__news-card",
+                            "img":"content/img/news/preview4.jpg",
+                            "alt":"Гражданская оборона"
+                            })
+                            @@include('html/modules/news.htm',{
+                            "class":" news__news-card",
+                            "img":"content/img/news/preview1.jpg",
+                            "alt":"Гражданская оборона"
+                            })
+                            @@include('html/modules/news.htm',{
+                            "class":" news__news-card",
+                            "img":"content/img/news/preview2.jpg",
+                            "alt":"Гражданская оборона"
+                            })
+                            @@include('html/modules/news.htm',{
+                            "class":" news__news-card",
+                            "img":"content/img/news/preview3.jpg",
+                            "alt":"Гражданская оборона"
+                            })
+                            @@include('html/modules/news.htm',{
+                            "class":" news__news-card",
+                            "img":"content/img/news/preview4.jpg",
+                            "alt":"Гражданская оборона"
+                            })
+                        </div>
+                        @@include('html/modules/pagination.htm',{"class":" news__pagination"})
+                    </div>
+                </section>
+            </main>
+            @@include('html/components/footer.htm',{})
+        </div>
+        @@include('html/components/js.htm',{})
+    </body>
+</html>

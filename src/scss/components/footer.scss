@@ -1,0 +1,223 @@
+//========================================================================================================================================================//
+.footer {
+    z-index: 3;
+    background-color: $color-dark-gray;
+
+    &__container {
+    }
+
+    &__body {
+        @include adaptive-value("padding-top", 60, 30);
+        @include adaptive-value("padding-bottom", 60, 30);
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: rem(20);
+
+        @media (max-width: md(1148)) {
+            @include adaptive-value("gap", 40, 20, 1147.98, 320, 1);
+        }
+
+        @media (max-width: md($mobile)) {
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        flex: 0 1 rem(359);
+
+        @media (max-width: md($mobile)) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__info {
+        flex: 0 1 rem(260);
+    }
+
+    &__copy {
+    }
+}
+
+.column-footer {
+    &__title {
+        position: relative;
+        font-weight: 700;
+        font-size: rem(22);
+        line-height: math.div(27, 22);
+        color: $color-light;
+
+        .spoller-init & {
+            cursor: pointer;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: rem(15);
+                height: rem(2);
+                background-color: $color-light;
+                transition: transform 0.5s ease;
+            }
+
+            &::before {
+                transform: translate(-75%, -50%) rotate(40deg);
+            }
+
+            &::after {
+                transform: translate(0, -50%) rotate(-40deg);
+            }
+
+            &.spoller-active {
+                &::before {
+                    transform: translateX(-75%) rotate(-40deg);
+                }
+
+                &::after {
+                    transform: rotate(40deg);
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            @include adaptive-value("margin-bottom", 27, 20);
+        }
+
+        @media (min-width: em($mobile)) {
+            cursor: auto;
+        }
+
+        @media (max-width: md($mobile)) {
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    &__list {
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: rem(14);
+        color: $color-light;
+        transition: all 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-light-blue;
+            }
+        }
+    }
+}
+
+.info-footer {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(22);
+        line-height: math.div(27, 22);
+        color: $color-light;
+
+        &:not(:last-child) {
+            margin-bottom: rem(27);
+        }
+    }
+
+    &__socials {
+        &:not(:last-child) {
+            margin-bottom: rem(35);
+        }
+    }
+
+    &__contacts {
+        &:not(:last-child) {
+            margin-bottom: rem(45);
+        }
+    }
+
+    &__button {
+        &:not(:last-child) {
+            @include adaptive-value("margin-bottom", 50, 20);
+        }
+
+        @media (max-width: md($mobile)) {
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        font-weight: 800;
+        font-size: rem(60);
+        line-height: math.div(74, 60);
+        text-transform: uppercase;
+        color: rgb(255 255 255 / 12.7%);
+    }
+
+    @media (max-width: md($mobile)) {
+        max-width: rem(300);
+    }
+}
+
+.socials-footer {
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: rem(13);
+
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__icon {
+        @include wh(rem(22), rem(22));
+
+        fill: $color-light;
+    }
+
+    &__link {
+        font-size: rem(17);
+        line-height: math.div(20, 17);
+        color: $color-light;
+        transition: all 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-light-blue;
+            }
+        }
+    }
+}
+
+.copy-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-top: rem(1) solid #4e4e4e;
+    padding: rem(20) 0;
+
+    &__text {
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: math.div(16, 14);
+        text-align: center;
+        text-transform: lowercase;
+        color: #565656;
+    }
+}
+
+//========================================================================================================================================================//
